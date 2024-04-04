@@ -1,6 +1,6 @@
 import pygame
 import sys
-from map import *
+from map import Map
  
 class game:
     def __init__(self):
@@ -102,25 +102,29 @@ class game:
                 si_green = False
             if key[pygame.K_3]:
                 is_vg = True
+                si_green = True
             if key[pygame.K_4]:
                 is_vg = False
+                
                 
 
             if si_green:
                 self.sc.fill(self.color)
                 self.draw_players()
-                # is_vg = False
+                
                 
             if si_green == False:
                 self.draw_p()
                 is_vg = False
+
             elif is_vg:
                 self.drow_player()
-               
-            elif is_vg == True:
-                self.draw_players()
-               
                 
+            elif is_vg == True:
+                self.draw_players_S()
+               
+            n = Map()
+            n.draw(self.sc, self.GREEN, self.radius) 
             
             
 
@@ -143,5 +147,12 @@ class game:
     def draw_players(self):
         self.sc.fill(self.color)
         pygame.draw.circle(self.sc, self.GREEN, (self.x, self.y), 13)
+        # pygame.display.flip()
+
+    def draw_players_S(self):
+        self.sc.fill("Blue")
+        pygame.draw.circle(self.sc, self.GREEN, (self.x, self.y), 13)
+        # pygame.display.flip()
+    
     
     
