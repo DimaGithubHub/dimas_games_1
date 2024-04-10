@@ -124,7 +124,8 @@ class game:
                 self.draw_players_S()
                
             n = Map()
-            n.draw(self.sc, self.GREEN, self.radius) 
+            # n.draw(self.sc, self.GREEN, self.radius)
+            n.draw(self.sc, self.GREEN) 
             
             
 
