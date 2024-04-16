@@ -24,7 +24,7 @@
 #                     pygame.draw.rect(screen, color, rect)
 #         pygame.display.flip()
 
-import pygame
+import pygame # type: ignore
 
 class Map:
     def __init__(self):
@@ -37,11 +37,11 @@ class Map:
                    "WWWWWWWWWWWWWWWWWWW"]
         self.num_cols = len(self.st[0])
         self.num_rows = len(self.st)
-        self.cell_width = 800 // self.num_cols
-        self.cell_height = 600 // self.num_rows
+        self.cell_width = 820 // self.num_cols
+        self.cell_height = 660 // self.num_rows
 
-        self.padding_x = 0
-        self.padding_y = 0
+        self.padding_x = 13
+        self.padding_y = 13
 
         self.W = self.num_cols * self.cell_width
         self.H = self.num_rows * self.cell_height

@@ -1,4 +1,5 @@
-import pygame
+import pygame # type: ignore
+# Start-Process -FilePath
 import sys
 from map import Map
  
